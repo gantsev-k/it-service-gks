@@ -1,0 +1,125 @@
+/* Experience Section */
+.experience {
+    padding: var(--exp-padding);
+    border-bottom: var(--border);
+}
+
+.experience__title {
+    font-family: var(--font-mono);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.experience__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: var(--exp-gap);
+}
+
+.experience__item {
+    border: var(--border);
+    padding: var(--exp-item-padding);
+    background-color: var(--color-white);
+}
+
+/* Блоки контента */
+.exp__header {
+    margin-bottom: 1rem;
+}
+
+.exp__comment {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-gray-800);
+    margin-bottom: 0.5rem;
+}
+
+.exp__name {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0 0 0.5rem;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 0.3em 0;
+}
+
+.exp__name .code-style {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin-left: 0;
+}
+
+/* Текстовая информация */
+.exp__content {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+}
+
+.exp__key {
+    color: var(--color-gray-800);
+}
+
+.exp__value {
+    color: var(--color-black);
+    font-weight: 600;
+}
+
+/* Списки */
+.exp__list {
+    margin: 0.5rem 0 0 var(--exp-list-indent);
+    padding: 0;
+    list-style-type: none;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-gray-800);
+}
+
+.exp__list li {
+    position: relative;
+    padding-left: var(--exp-list-indent);
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+}
+
+.exp__list li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--color-code);
+    margin-right: 0.5rem;
+}
+
+.exp__list li strong {
+    color: var(--color-code);
+    font-weight: 600;
+}
+
+/* CTA */
+.exp__cta {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-code);
+    color: var(--color-white);
+    font-family: var(--font-mono);
+    text-decoration: none;
+    border-radius: 4px;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
+
+.exp__cta:hover {
+    background-color: var(--color-black);
+}

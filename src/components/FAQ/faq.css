@@ -1,0 +1,181 @@
+/* FAQ Section */
+.faq {
+    padding: 4rem 0;
+    background-color: var(--color-white);
+    border-bottom: var(--border);
+}
+
+.faq__title {
+    font-family: var(--font-mono);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: var(--color-black);
+}
+
+/* Accordion */
+.accordion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.accordion__item {
+    border: var(--border);
+    background-color: var(--color-white);
+    overflow: hidden;
+}
+
+.accordion__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.25rem;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+    color: var(--color-code);
+}
+
+.accordion__header:hover {
+    background-color: var(--color-gray-100);
+}
+
+.accordion__question {
+    font-weight: 500;
+}
+
+.accordion__icon {
+    font-family: var(--font-mono);
+    color: var(--color-gray-800);
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.accordion__content .code-style {
+    padding: 0 1.25rem 1.25rem;
+    margin: 0;
+    background: transparent;
+}
+
+.accordion__item.active .accordion__content {
+    max-height: 500px;
+    border-top: var(--border);
+}
+
+.accordion__item.active .accordion__icon {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    color: var(--color-code);
+}
+
+/* Дополнительные стили для контента */
+.accordion__content .code-style {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 0 1.25rem 1.25rem;
+}
+
+.accordion__content .code-style p {
+    margin: 0.5rem 0;
+}
+
+/* Курсор в заголовке */
+.faq__title .blinking-cursor {
+    color: var(--color-code);
+    -webkit-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+}
+
+/* Категории FAQ */
+.faq-category {
+    font-family: var(--font-mono);
+    color: var(--color-code);
+    margin: 3rem 0 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--color-gray-300);
+}
+
+/* Блоки решений */
+.solution-cta {
+    color: var(--color-code);
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--color-gray-200);
+    font-weight: 600;
+}
+
+/* Кнопка CTA */
+.faq-cta {
+    text-align: center;
+    margin-top: 3rem;
+    font-family: var(--font-mono);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--color-code);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+.cta-button:hover {
+    background: var(--color-black);
+}
+
+/* Иконки аккордеона */
+.accordion__icon {
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+}
+
+.accordion__item.active .accordion__icon {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

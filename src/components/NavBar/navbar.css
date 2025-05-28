@@ -1,0 +1,43 @@
+/* Navigation */
+.nav-bar {
+    --nav-gap: 2rem;
+    --nav-link-size: 0.9rem;
+}
+
+.nav-bar__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: var(--nav-gap);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar__link {
+    font-family: var(--font-mono);
+    font-size: var(--nav-link-size);
+    text-transform: lowercase;
+    color: var(--color-black);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.nav-bar__link:hover,
+.nav-bar__link[aria-current="page"] {
+    color: var(--color-code);
+    text-decoration: none;
+}
+
+.nav-bar__link[aria-current="page"] {
+    color: var(--color-code);
+    position: relative;
+}
+
+.nav-bar__link[aria-current="page"]::after {
+    content: "←";
+    margin-left: 0.3rem;
+    color: var(--color-code);
+}

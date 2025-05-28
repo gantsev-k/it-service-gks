@@ -1,0 +1,106 @@
+/* Cases Section */
+.cases {
+    --cases-padding: 4rem 0;
+    --cases-gap: 1.5rem;
+    --case-padding: 1.25rem;
+    --case-image-min-height: 160px;
+    --case-image-padding: 1rem;
+
+    padding: var(--cases-padding);
+    border-bottom: var(--border);
+}
+
+.cases__title {
+    font-family: var(--font-mono);
+    font-size: var(--text-xl);
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.cases__list {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--cases-gap);
+    padding-right: 2rem;
+}
+
+.case {
+    border: var(--border);
+    padding: var(--case-padding);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
+
+.case:hover {
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+}
+
+.case__header {
+    margin-bottom: 1rem;
+}
+
+.case__comment {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-gray-800);
+    margin-bottom: 0.5rem;
+}
+
+.case__name {
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0 0 0.5rem;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 0.3em 0;
+}
+
+.case__name .code-style {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin-left: 0;
+}
+
+.case__image {
+    margin-bottom: 0.75rem;
+    background-color: var(--color-gray-100);
+    padding: var(--case-image-padding);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: var(--case-image-min-height);
+}
+
+.case__image img {
+    max-height: 200px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -webkit-filter: grayscale(100%) contrast(120%);
+    filter: grayscale(100%) contrast(120%);
+}
+
+.case__descr {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--color-gray-800);
+}
+
+.case__name .code-style {
+    font-size: 0.9em;
+    margin-left: 0.3em;
+}

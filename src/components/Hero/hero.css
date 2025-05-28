@@ -1,0 +1,47 @@
+/* Hero Section */
+.hero {
+    --hero-padding: 6rem 0;
+    --hero-gap: 1rem;
+    --title-min: 1.5rem;
+    --title-max: 2.5rem;
+
+    padding: var(--hero-padding);
+    text-align: center;
+}
+
+.hero-title {
+    font-family: var(--font-mono);
+    font-size: clamp(var(--title-min), 5vw, var(--title-max));
+    font-weight: 400;
+    margin-bottom: var(--hero-gap);
+    color: var(--color-black);
+}
+
+.hero-title__arg {
+    color: var(--color-code);
+}
+
+.hero-descr {
+    font-family: var(--font-mono);
+    font-size: var(--text-base);
+    color: var(--color-gray-800);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 0.5rem;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.code-style {
+    color: var(--color-code);
+}
